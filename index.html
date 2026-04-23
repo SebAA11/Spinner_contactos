@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos</title>
+<link rel="stylesheet" href="css/styles.css" />
+
+</head>
+<body>
+
+
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>NEXUS</span>
+    </div>
+    <p class="tagline">Tu agenda, redefinida</p>
+  </header>
+
+  <main class="container">
+
+    <!-- FORM PANEL -->
+    <section class="form-panel">
+      <h2 class="panel-title">Nuevo Contacto</h2>
+
+      <div id="toast" class="toast hidden"></div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Ej: Sofía" />
+            <span class="err-msg">Campo requerido</span>
+          </div>
+          <div class="field">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" placeholder="Ej: Martínez" />
+            <span class="err-msg">Campo requerido</span>
+          </div>
+          <div class="field">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" placeholder="Ej: Cali" />
+            <span class="err-msg">Campo requerido</span>
+          </div>
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="Ej: 3001234567" />
+            <span class="err-msg">Campo requerido</span>
+          </div>
+          <div class="field full">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" placeholder="Ej: Calle 5 #23-10" />
+            <span class="err-msg">Campo requerido</span>
+          </div>
+          <div class="field full gender-field">
+            <label>Género</label>
+            <div class="gender-group">
+              <label class="gender-option">
+                <input type="radio" name="genero" value="Masculino" />
+                <span>♂ Masculino</span>
+              </label>
+              <label class="gender-option">
+                <input type="radio" name="genero" value="Femenino" />
+                <span>♀ Femenino</span>
+              </label>
+            </div>
+            <span class="err-msg" id="generoErr">Selecciona un género</span>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-add" aria-label="Agregar nuevo contacto">
+          <span class="btn-icon">+</span> Agregar Contacto
+        </button>
+      </form>
+    </section>
+
+    <!-- LIST PANEL -->
+    <section class="list-panel">
+      <div class="list-header">
+        <h2 class="panel-title">Agenda</h2>
+        <span id="contactCount" class="count-badge">0 contactos</span>
+      </div>
+      <div id="contactList" class="contact-list">
+        <div class="empty-state">
+          <div class="empty-icon">◎</div>
+          <p>Aún no tienes contactos.<br/>¡Agrega el primero!</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
